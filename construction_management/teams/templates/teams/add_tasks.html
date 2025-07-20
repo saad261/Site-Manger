@@ -1,0 +1,22 @@
+{% extends "teams/base.html" %}
+
+{% block content %}
+    <center>
+        <h1>add task to the location </h1>
+        <br/><br/>
+        {% if submitted %}
+            YOUR TEAM WAS submitted SUCCESSFULLY!!!!
+
+        {% else %}
+
+            <form action = "" method =POST>
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <input type="submit" value="submit" class="btn btn-secondary">
+
+            </form>
+        {% endif %}
+    </center>
+{% endblock content %}
